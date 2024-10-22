@@ -11,8 +11,8 @@ Este es un repositorio en el que estoy trabajando para **hacer crecer mi portafo
 
 1. Clona el repositorio:
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
-   cd tu_repositorio
+   git clone https://github.com/IsaacLeblois/ERP-Demo
+   cd ERP-Demo
    ```
 
 2. Instala las dependencias:
