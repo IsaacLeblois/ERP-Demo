@@ -17,7 +17,7 @@ Este es un repositorio en el que estoy trabajando para **hacer crecer mi portafo
 
 2. Instala las dependencias:
    ```bash
-   npm install
+   npm install .
    ```
 
 3. Inicia los proyectos:
