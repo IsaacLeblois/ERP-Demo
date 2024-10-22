@@ -38,8 +38,10 @@ Este es un repositorio en el que estoy trabajando para **hacer crecer mi portafo
 
 ## Contacto
 
-- **Nombre**: IsaacLeblois
+- **Nombre**: Isaac Leblois
+- **Gmail**: isaacleblois@gmail.com
 - **GitHub**: [IsaacLeblois](https://github.com/IsaacLeblois)
+- **Instagram**: [IsaacLeblois](https://instagram.com/IsaacLeblois)
 
 ---
 
