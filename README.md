@@ -1,4 +1,3 @@
-```markdown
 # ERP DEMO
 
 Este es un repositorio en el que estoy trabajando para **hacer crecer mi portafolio**. Aquí encontrarás proyectos y aplicaciones que desarrollo en mi camino como desarrollador.
@@ -45,4 +44,3 @@ Este es un repositorio en el que estoy trabajando para **hacer crecer mi portafo
 ---
 
 ¡Gracias por visitar mi proyecto! 😊
-```
