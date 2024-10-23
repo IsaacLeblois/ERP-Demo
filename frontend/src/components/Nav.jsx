@@ -14,6 +14,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { Link } from 'react-router-dom'; // Importa Link
 
 const pages = [
+    { name: 'Resumen', path: '/' },
     { name: 'Ventas', path: '/tickets' },
     { name: 'Productos', path: '/products' },
     { name: 'Inventario', path: '/inventory' },

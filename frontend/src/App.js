@@ -8,12 +8,14 @@ import Suppliers from './pages/Suppliers.jsx';
 import Tickets from './pages/Tickets.jsx';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
+import React, {useEffect, useState} from 'react';
+import Loader from './components/Loader.jsx';
 
 const theme = createTheme({
   palette: {
     mode: 'dark', // Modo oscuro
     background: {
-      default: '#000', // Color de fondo principal
+      default: '#121212', // Color de fondo principal
       paper: '#1e1e1e', // Color de fondo para los componentes como tarjetas
     },
     text: {
@@ -23,26 +25,39 @@ const theme = createTheme({
   },
 });
 
-function App() {
+const App = () => { // Asegúrate de que esto sea un componente funcional
+  const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setFadeOut(true); // Inicia el fade out
+      setTimeout(() => setLoading(false), 500); // Oculta el loader después de la transición
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="App">
-      <ThemeProvider theme={theme}>
-        <CssBaseline /> {/* Establece los estilos globales de MUI */}
-        <Router>
-          <Nav />
-          <Routes>
-            <Route path="/" element={<Home />} />           {/* Página principal */}
-            <Route path="/inventory" element={<Inventory />} />           {/* Página principal */}
-            <Route path="/products" element={<Products />} />           {/* Página principal */}
-            <Route path="/Suppliers" element={<Suppliers />} />           {/* Página principal */}
-            <Route path="/Tickets" element={<Tickets />} />           {/* Página principal */}
-            <Route path="404" element={<NotFound />} />      {/* Página 404 para rutas no encontradas */}
-            <Route path="*" element={<Navigate to="/404" />} />
-          </Routes>
-        </Router>
-      </ThemeProvider>
-    </div>
+    <>
+    {loading && <Loader fadeOut={fadeOut} />}
+    <ThemeProvider theme={theme}>
+      <CssBaseline /> {/* Establece los estilos globales de MUI */}
+      <Router>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />           {/* Página principal */}
+          <Route path="/inventory" element={<Inventory />} />           {/* Página principal */}
+          <Route path="/products" element={<Products />} />           {/* Página principal */}
+          <Route path="/Suppliers" element={<Suppliers />} />           {/* Página principal */}
+          <Route path="/Tickets" element={<Tickets />} />           {/* Página principal */}
+          <Route path="404" element={<NotFound />} />      {/* Página 404 para rutas no encontradas */}
+          <Route path="*" element={<Navigate to="/404" />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
